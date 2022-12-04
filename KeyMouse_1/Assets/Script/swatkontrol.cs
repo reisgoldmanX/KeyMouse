@@ -8,7 +8,7 @@ public class swatkontrol : MonoBehaviour
     void Start()
     {
         swat = GetComponent<Animator>();
-        Time.timeScale = 0;
+        Time.timeScale = 0; // Pause Game in the first run
     }
 
     
@@ -19,17 +19,36 @@ public class swatkontrol : MonoBehaviour
     }
     void Swat_control()
     {
-        
         if (Input.GetKey(KeyCode.W))
         {
-            swat.SetFloat("hiz", 0.4f);
+            swat.SetFloat("hiz", 0.4f); // WALK Speed
             if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
             {
-                swat.SetFloat("hiz", 1f);
+                swat.SetFloat("hiz", 1f); // Running Speed
             }
+        }
+
+        else if (Input.GetKey(KeyCode.A))
+        {
+            // Walk Left
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            // Walk Right
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            // Walk Back
+        }
+        else if (Input.GetKey(KeyCode.LeftControl))
+        {
+            // crouch and stand still
+
+            
         }
         else
         {
+            // Stand still (no movement)
             swat.SetFloat("hiz", 0f);
         }
     }

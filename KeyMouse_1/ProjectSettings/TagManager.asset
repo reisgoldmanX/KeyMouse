@@ -3,12 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - HUD_element
+  - Hud
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - HUD
   - Water
   - UI
   - 
